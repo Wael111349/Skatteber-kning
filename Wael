@@ -1,1 +1,30 @@
 
+import javax.swing.*;
+  public class StatligInkomstSkatt {
+
+
+  public static void main (String [] args) {
+    //Initiering av variabler
+        //Nedre skiktgränsen
+        int g = 455300; // nedre skiktgränsen
+        int o = 662300; // övre skiktgränsen
+        double z = 0.8;// 20 & procent skatt
+         double x = 0.75; // 25 % skatt
+
+      //Variabel som håller värdet om vi vill lägga in fler eller inte. 0 = ja, 1 = nej
+      int fler = 0;
+
+      //Detta är en array som innehåller de värde man kan välja mellan i rutan. (1 eller 2)
+      Integer val[]= {1, 2};
+
+      while (fler == 0) {
+          //Koden som frågar om inkomst för personen
+          String inkomst = JOptionPane.showInputDialog(null, "Årsnkomst? ", "Skatteberäkning", JOptionPane.QUESTION_MESSAGE);
+       int ink = Integer.parseInt(inkomst); // initiering av variablen inkomst.
+
+      }
+
+ int inkomst = 0;
+      int grundavdrag = 13400;
+      if (inkomst >= g){ //Om årsinkomst är lika stor som skiktgränsen eller över skall programmet räkna med 20 & skatt - grundavdrag.
+          (inkomst - grundavdrag)* z;
